@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace la página responsiva -->
+    <title>Capítulos del Anime</title>  <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="archivos CSS\styles.css">  <!-- Enlace al archivo CSS para los estilos -->
+</head>
+<body>
+        <!-- CABECERA DE LA PÁGINA -->
+
+    <header>
+        <button onclick="window.history.back()">⬅</button>  <!-- Botón para regresar a la página anterior -->
+        <h1 id="anime-title"></h1> <!-- Nombre del anime -->
+    </header>
+
+    <main>
+        <section id="episode-list" class="anime-list">
+            <!-- Lista de capítulos generada dinámicamente -->
+        </section>
+    </main>
+
+    <script src="archivos JS\capitulos.js"></script> <!-- Archivo JS que genera la lista de capítulos -->
+</body>
+</html>

@@ -1,0 +1,479 @@
+/* RESET BÁSICO: Elimina los márgenes y paddings predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+}
+
+/* TÍTULO PRINCIPAL: Estilo para el título de la página principal */
+.main-title {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR DE BOTONES EN LA PÁGINA PRINCIPAL */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-bottom: 30px;
+}
+
+/* BOTÓN DE FAVORITOS: Botón circular con emoji 💖 */
+#favorites-button {
+    width: 60px;
+    height: 60px; /* Tamaño cuadrado para hacer círculo con border-radius */
+    background-color: #e9c5c5; /* Color rojo */
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20%; /* Forma circular */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+#favorites-button:hover {
+    background-color: #e63946; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* BOTÓN DE PROGRAMACIÓN SEMANAL*/
+#schedule-button {
+    width: 200px;
+    height: 60px;
+    background-color: #d43d56bd; 
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+#schedule-button:hover {
+    background-color: #581823;
+}
+
+/* BOTÓN DE BÚSQUEDA: Botón circular con emoji 🔍 */
+#search-button {
+    width: 60px;
+    height: 60px;
+    background-color: #829b81; 
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20%; /* Forma circular */
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #4fa44f;
+}
+
+
+/* HEADER: Contenedor superior de la página */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+}
+header button {
+    font-size: 1.5rem; /* tamaño Flecha */
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header h1 {
+    margin-left: 10px;
+    font-size: 1.5rem; 
+    color: white;
+}
+
+/* Responsividad del header */
+@media (min-width: 768px) {
+    header {
+        justify-content: center;
+    }
+    .header-buttons {
+        display: flex;
+        gap: 20px; /* Espaciado entre botones */
+    }
+}
+
+@media (max-width: 767px) {
+    .header-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Botones del header */
+.header-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/* Main */
+main {
+    padding: 10px;
+    max-height: 100vh;
+    overflow-y: auto; /* Hacer contenido scrollable */
+}
+
+.main-button {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #5a6268;
+}
+
+
+/* Lista de animes */
+.anime-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.anime-list img {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.anime-item {
+    display: flex;   /* Organiza la imagen y el texto horizontalmente */
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    height: 120px;  /* Altura fija para cada elemento */
+}
+
+.anime-item img {
+    width: 80px;   
+    height: auto;  /* Ajusta automáticamente la altura */
+    object-fit: cover;  /* Mantiene la proporción de la imagen */
+    border-radius: 4px;
+}
+
+.anime-details h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.anime-details p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.seen-checkbox {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;   /* Flexbox para organizar input y botón */
+    width: 100%;
+    padding: 20px;
+    gap: 10px;      /* Espaciado entre input y botón */
+    background-color: #1a1a1a;
+}
+
+.search-container input {
+    flex: 1;        /* Input ocupa todo el espacio disponible */
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.search-container button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+/* Resultados */
+#search-results {
+    padding: 20px;
+}
+
+#search-results h2 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.anime-list li {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.anime-list span {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Animes sugeridos */
+.suggested-animes {
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+.suggested-animes h2 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.suggested-animes ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+/* detalles de cada anime */
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*  FAVORITOS */
+.favorite-button {
+    background-color: #864d4d; /* Color para el botón de favoritos */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el botón de ver capítulos */
+#watch-button {
+    background-color: #d43d56bd; /* Color para el botón de ver capítulos */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#notification-button {
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.favorite-button:hover {
+    background-color: #bb7b7b; /* Color más oscuro al pasar el mouse */
+}
+
+.watch-button:hover {
+    background-color: #70302b; /* Color más oscuro al pasar el mouse */
+}
+
+#notification-button:hover {
+    background-color: #483d8b;
+}
+
+
+.anime-details {
+    margin-top: 20px;
+}
+
+.anime-image {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.anime-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.anime-description {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.additional-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-block {
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.info-block h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-block p, .info-block a {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.info-block a {
+    color: #55aaff;
+    text-decoration: none;
+}
+
+                            /* Botón de favoritos */
+#favorite-button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#favorite-button:hover {
+    background-color: #e5c100;
+}
+
+                            /* Página de favoritos */
+#favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.favorite-item {
+    display: flex;   /* Organiza imagen y texto horizontalmente */
+    align-items: center;
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.favorite-item img {
+    width: 80px;
+    height: auto;   /* Ajusta automáticamente la altura */
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.favorite-item h3 {
+    font-size: 18px;  /* Tamaño del título */
+    color: white;
+    margin: 0;
+}
+
+.favorite-item p {
+    font-size: 14px;   
+    color: #b0b0b0;
+    margin: 0;
+}
+
+/* PROGRAMACIÓN SEMANAL */
+#schedule {
+    padding: 20px;
+}
+
+/* Secciones de días */
+.day-section {
+    margin-bottom: 30px;
+}
+
+/* Títulos de días */
+.day-section h2 { 
+    font-size: 1.5rem;   /* Tamaño del título del día */
+    margin-bottom: 10px;   /* Separación inferior */
+    text-transform: uppercase;  /* Texto en mayúsculas */
+    border-bottom: 2px solid #555;  /* Línea debajo del título */
+    padding-bottom: 5px;
+}
+

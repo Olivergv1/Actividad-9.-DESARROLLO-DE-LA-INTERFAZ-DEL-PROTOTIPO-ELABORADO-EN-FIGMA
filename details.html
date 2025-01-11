@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Anime</title>
+    <link rel="stylesheet" href="archivos CSS/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Contenedor de botones -->
+        <div class="button-container">
+            <header>
+                <button onclick="window.history.back()">⬅</button> <!-- Botón para regresar -->
+            </header>
+            <button id="favorite-button">Agregar a Favoritos</button> <!-- Botón de favoritos -->
+            <button id="notification-button">Activar Notificaciones</button> <!-- Botón de notificaciones -->
+        </div>
+
+        <!-- Detalles del anime -->
+        <section class="anime-details">
+            <h1 id="anime-title" class="anime-title"></h1> <!-- Título del anime -->
+            <img id="anime-image" src="" alt="Imagen del Anime" class="anime-image"> <!-- Imagen del anime -->
+            <div id="synopsis-container">
+                <p id="anime-description" class="anime-description"></p> <!-- Descripción del anime -->
+                <p id="anime-synopsis" class="anime-synopsis"></p> <!-- Sinopsis -->
+                <button id="view-more-button" class="view-more-button">Ver más</button> <!-- Botón para mostrar más sinopsis -->
+            </div>
+        </section>
+
+        <!-- Botón para ver capítulos -->
+        <button id="watch-button">Ver Capítulos del Anime</button>
+
+        <!-- Información adicional -->
+        <section class="additional-info">
+            <div class="info-block">
+                <h3>Episodios disponibles</h3>
+                <p id="anime-episodes"></p>
+            </div>
+            <div class="info-block">
+                <h3>Géneros</h3>
+                <p id="anime-genres"></p>
+            </div>
+            <div class="info-block">
+                <h3>Día en que sale un nuevo capítulo</h3>
+                <p id="anime-next-episode"></p>
+            </div>
+            <div class="info-block">
+                <h3>Mirar tráiler en YouTube</h3>
+                <a id="anime-trailer" href="#" target="_blank">Ver tráiler</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="archivos JS/details.js"></script>
+</body>
+</html>

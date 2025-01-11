@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda</title>  <!-- Título de la página que se muestra en el navegador -->
+    <link rel="stylesheet" href="archivos CSS\styles.css">  <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>
+        <!-- CABECERA DE LA PÁGINA -->
+
+    <header>
+            <!-- Botón para regresar a la página anterior -->
+        <button onclick="window.history.back()">⬅</button> <!-- Flecha sin texto -->
+        <h1>Búsqueda de anime</h1> <!-- Título con tamaño más pequeño -->
+    </header>
+
+    <!-- BARRA DE BÚSQUEDA -->
+    <section class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar anime..." />  <!-- Campo de texto para que el usuario ingrese el nombre del anime -->
+        <button id="search-button">🔍</button>         <!-- Botón para ejecutar la búsqueda -->
+    </section>
+
+    <section id="search-results" class="hidden">    <!-- RESULTADOS DE LA BÚSQUEDA -->
+        <h2>Resultados de la búsqueda</h2>
+        <ul class="anime-list"></ul>         <!-- Lista que se llenará dinámicamente con los resultados -->
+    </section>
+    <section class="suggested-animes">    <!-- ANIMES SUGERIDOS -->
+        <h2>Animes sugeridos</h2> <!-- Título para las sugerencias -->
+        <ul> 
+            <li>Dandadan</li>  <!-- Lista estática de animes sugeridos -->
+            <li>Under Ninja</li>
+            <li>Takt Op. Destiny</li>
+            <li>Dr. Stone: Stone Wars</li>
+            <li>One Punch Man</li>
+        </ul>
+    </section>
+    <script src="archivos JS\script.js"></script>  <!-- ENLACE AL ARCHIVO JS -->
+</body> 
+</html>

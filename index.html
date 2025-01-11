@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <title>Pagina principalr</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="archivos CSS\styles.css"> <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>
+    <header>     <!-- CABECERA -->
+        <h1 class="main-title">APLICACIÓN DE ANIME</h1>         <!-- Título principal de la página -->
+    </header>    
+
+    <main>         <!-- CONTENEDOR DE BOTONES -->
+        <div class="button-container">
+            <button id="favorites-button" onclick="window.location.href='favoritos.html'">💖</button>
+            <button id="schedule-button" onclick="window.location.href='programacion.html'">Programación Semana</button>
+            <button id="search-button" onclick="window.location.href='buscar.html'">🔍</button>
+            <script src="archivos JS\script.js"></script>
+        </div>
+    </main>
+
+    <!-- LISTA DE ANIMES -->
+    <ul class="anime-list">
+        <!-- Cada anime en la lista está configurado para redirigir a su página de detalles al hacer clic -->
+
+        <!-- base de datos de los animes -->
+
+        <li onclick="goToDetails('Dandadan')">
+            <img src="imagenes/1.jpg" alt="Dandadan">
+            <div>
+                <span>Dandadan</span><br>
+                <span>Capítulo: 12</span><br>
+                <span>Hace 2 horas</span>
+            </div>
+        </li>
+
+        <li onclick="goToDetails('Under Ninja')">
+            <img src="imagenes/2.jpg" alt="Under Ninja">
+            <div>
+                <span>Under Ninja</span><br>
+                <span>Capítulo: 12</span><br>
+                <span>Hace 3 horas</span>
+            </div>
+        </li>
+
+        <li onclick="goToDetails('Takt Op. Destiny')">
+            <img src="imagenes/3.jpg" alt="Takt Op. Destiny">
+            <div>
+                <span>Takt Op. Destiny</span><br>
+                <span>Capítulo: 11</span><br>
+                <span>Hace 8 horas</span>
+            </div>
+        </li>
+
+        <li onclick="goToDetails('Dr. Stone: Stone Wars')">
+            <img src="imagenes/4.jpg" alt="Dr. Stone: Stone Wars">
+            <div>
+                <span>Dr. Stone: Stone Wars</span><br>
+                <span>Capítulo: 11</span><br>
+                <span>Hace 4 horas<span>
+            </div>
+        </li>
+
+        <li onclick="goToDetails('One Punch Man')">
+            <img src="imagenes/5.jpg" alt="One Punch Man">
+            <div>
+                <span> One Punch Man</span><br>
+                <span>Capítulo: 11</span><br>
+                <span>Hace 4 horas<span>
+            </div>
+        </li>
+
+            
+    </ul>
+
+</body>
+</html>

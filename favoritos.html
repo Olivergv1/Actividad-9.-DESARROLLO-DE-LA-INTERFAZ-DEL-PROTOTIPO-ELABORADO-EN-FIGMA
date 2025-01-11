@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <title>Animes Favoritos</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="archivos CSS\styles.css"> <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>  
+    <header>     <!-- CABECERA -->
+        <button onclick="window.history.back()">⬅</button>     <!-- Botón para regresar a la página anterior -->
+        <h1>ANIMES AGREGADOS A FAVORITOS</h1>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section id="favorites-list"></section> <!-- Aquí se mostrarán los animes favoritos -->
+        <p id="no-favorites-message" style="text-align: center; color: white;">Todavía no has agregado ningún anime.</p>          <!-- Muestra un mensaje si no hay animes favoritos agregados -->
+    </main>
+
+    <script src="archivos JS\favorites.js"></script> <!-- Archivo que maneja la lógica de favoritos -->
+</body>
+</html>
+
